@@ -11,7 +11,7 @@ A simple service for preloading a list of images. Callback for each image loaded
 ```
 #!javascript
 
-angular.module('demoModule', ['creaImagesPreloder'])
+angular.module('demoModule', ['creaImagesPreloder']);
 ```
 
 ### Example ###
@@ -19,7 +19,7 @@ angular.module('demoModule', ['creaImagesPreloder'])
 ```
 #!javascript
 
-angular.module('demoModule').controller('imagesPreloader', function(imagesPreloader){
+angular.module('demoModule').controller('imagesPreloader', ['imagesPreloader', function(imagesPreloader){
      
      ImagesPreloader.preload([
           'http://lorempixel.com/400/200/nature/1/',
@@ -36,5 +36,5 @@ angular.module('demoModule').controller('imagesPreloader', function(imagesPreloa
           console.log("All images loaded");
      }
 
-}
+}]);
 ```
