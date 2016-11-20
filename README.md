@@ -1,29 +1,40 @@
 # ANGULARJS IMAGES PRELOADER #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+A simple service for preloading a list of images. Callback for each image loaded and callback for all images loaded.
 
-### What is this repository for? ###
+### Requirements ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* AngularJS 1.4+
 
-### How do I get set up? ###
+### Installation ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+```
+#!javascript
 
-### Contribution guidelines ###
+angular.module('demoModule', ['creaImagesPreloder'])
+```
 
-* Writing tests
-* Code review
-* Other guidelines
+### Usage ###
 
-### Who do I talk to? ###
+```
+#!javascript
 
-* Repo owner or admin
-* Other community or team contact
+angular.module('demoModule').controller('imagesPreloader', function(imagesPreloader){
+     
+     ImagesPreloader.preload([
+          'http://lorempixel.com/400/200/nature/1/',
+          'http://lorempixel.com/400/200/nature/2/',
+          'http://lorempixel.com/400/200/nature/3/',
+          'http://lorempixel.com/400/200/nature/4/',
+     ], callbackImageLoaded, callbackAllImagesLoaded);
+
+     function callbackImageLoaded(imageURL, numberImagesLoaded, numberImagesTotal){
+          console.log( imageURL + ":" + numberImagesLoaded + "/" +numberImagesTotal);
+     }
+
+     function callbackAllImagesLoaded(){
+          console.log("All images loaded");
+     }
+
+}
+```
