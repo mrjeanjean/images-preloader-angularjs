@@ -14,12 +14,34 @@ A simple service for preloading a list of images. Callback for each image loaded
 angular.module('demoModule', ['creaImagesPreloder']);
 ```
 
+### Options ###
+
+#### Preload method ####
+Don't forget to inject ImagesPreloader into the controller you want to use.
+
+Preload method has the following signature :
+
+```
+#!javascript
+ImagesPreloader.preload([], callbackImageLoaded, callbackAllImagesLoaded);
+```
+
+#### Images ####
+First parameter is the list of images you want to preload as an array - **Required**
+
+#### Image loaded callback ####
+Second argument is a callback function fired after for each image has been loaded.
+
+#### All images loaded callback ####
+Third argument is a callback function fired once after all images have been loaded.
+
+
 ### Example ###
 
 ```
 #!javascript
 
-angular.module('demoModule').controller('imagesPreloader', ['imagesPreloader', function(imagesPreloader){
+angular.module('demoModule').controller('demoController', ['ImagesPreloader', function(ImagesPreloader){
      
      ImagesPreloader.preload([
           'http://lorempixel.com/400/200/nature/1/',
