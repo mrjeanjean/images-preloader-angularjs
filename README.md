@@ -14,7 +14,7 @@ A simple service for preloading a list of images. Callback for each image loaded
 angular.module('demoModule', ['creaImagesPreloder'])
 ```
 
-### Usage ###
+### Example ###
 
 ```
 #!javascript
