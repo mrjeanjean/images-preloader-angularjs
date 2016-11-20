@@ -1,6 +1,6 @@
 # ANGULARJS IMAGES PRELOADER #
 
-A simple service for preloading a list of images. Callback for each image loaded and callback for all images loaded.
+A simple angularjs module for preloading a list of images.
 
 ### Requirements ###
 
