@@ -51,7 +51,7 @@ angular.module('demoModule').controller('demoController', ['ImagesPreloader', fu
      ], callbackImageLoaded, callbackAllImagesLoaded);
 
      function callbackImageLoaded(imageURL, numberImagesLoaded, numberImagesTotal){
-          console.log( imageURL + ":" + numberImagesLoaded + "/" +numberImagesTotal);
+          console.log(imageURL + ":" + numberImagesLoaded + "/" +numberImagesTotal);
      }
 
      function callbackAllImagesLoaded(){
