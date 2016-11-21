@@ -21,8 +21,10 @@ Don't forget to inject `ImagesPreloader` into the controller you want to use.
 
 Preload method has the following signature :
 
-    ImagesPreloader.preload(images, callbackImageLoaded, callbackAllImagesLoaded);
-
+```
+#!javascript
+ImagesPreloader.preload(images, callbackImageLoaded, callbackAllImagesLoaded);
+```
 
 #### Images ####
 First parameter is the list of images you want to preload as an array - **Required**
