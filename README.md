@@ -11,20 +11,18 @@ A simple angularjs module for preloading a list of images.
 ```
 #!javascript
 
-angular.module('demoModule', ['creaImagesPreloder']);
+angular.module('demoModule', ['creaImagesPreloader']);
 ```
 
 ### Options ###
 
 #### Preload method ####
-Don't forget to inject ImagesPreloader into the controller you want to use.
+Don't forget to inject `ImagesPreloader` into the controller you want to use.
 
 Preload method has the following signature :
 
-```
-#!javascript
-ImagesPreloader.preload([], callbackImageLoaded, callbackAllImagesLoaded);
-```
+    ImagesPreloader.preload(images, callbackImageLoaded, callbackAllImagesLoaded);
+
 
 #### Images ####
 First parameter is the list of images you want to preload as an array - **Required**
@@ -40,9 +38,8 @@ Third argument is a callback function fired once after all images have been load
 
 ```
 #!javascript
+angular.module('demo-module').controller('demoController', ['ImagesPreloader', function(ImagesPreloader){
 
-angular.module('demoModule').controller('demoController', ['ImagesPreloader', function(ImagesPreloader){
-     
      ImagesPreloader.preload([
           'http://lorempixel.com/400/200/nature/1/',
           'http://lorempixel.com/400/200/nature/2/',
@@ -51,7 +48,7 @@ angular.module('demoModule').controller('demoController', ['ImagesPreloader', fu
      ], callbackImageLoaded, callbackAllImagesLoaded);
 
      function callbackImageLoaded(imageURL, numberImagesLoaded, numberImagesTotal){
-          console.log(imageURL + ":" + numberImagesLoaded + "/" +numberImagesTotal);
+          console.log(imageURL + " : " + numberImagesLoaded + "/" +numberImagesTotal + " loaded");
      }
 
      function callbackAllImagesLoaded(){

@@ -1,0 +1,20 @@
+{
+  "name": "crea-images-preloader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/crea-images-preloader.angular.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "crealice",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-concat": "^2.6.0",
+    "gulp-jslint": "^1.0.5",
+    "gulp-load-plugins": "latest",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.10"
+  }
+}
