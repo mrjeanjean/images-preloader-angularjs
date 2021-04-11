@@ -1,4 +1,4 @@
-# ANGULARJS IMAGES PRELOADER #
+# AngularJS - Images preloader #
 
 A simple angularjs module for preloading a list of images.
 
@@ -8,8 +8,7 @@ A simple angularjs module for preloading a list of images.
 
 ### Installation ###
 
-```
-#!javascript
+```javascript
 angular.module('demoModule', ['creaImagesPreloader']);
 ```
 
@@ -20,8 +19,7 @@ Don't forget to inject `ImagesPreloader` into the controller you want to use.
 
 Preload method has the following signature :
 
-```
-#!javascript
+```javascript
 ImagesPreloader.preload(images, callbackImageLoaded, callbackAllImagesLoaded);
 ```
 
@@ -37,8 +35,7 @@ Third argument is a callback function fired once after all images have been load
 
 ### Example ###
 
-```
-#!javascript
+```javascript
 angular.module('demo-module').controller('demoController', ['ImagesPreloader', function(ImagesPreloader){
 
      ImagesPreloader.preload([
